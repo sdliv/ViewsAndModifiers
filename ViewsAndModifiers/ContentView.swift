@@ -9,16 +9,15 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var userRedText = false
+    var motto1: some View { Text("Text 1")}
+    let motto2 = Text("Text 2")
     var body: some View {
         VStack {
-            Text("Anakin")
-                .blur(radius: 0)
-            Text("Ahsoka")
-            Text("ObiWan")
-            Text("Yoda")
+            motto1
+                .foregroundColor(.red)
+            motto2
+                .foregroundColor(.blue)
         }
-        .blur(radius: 5)
         
     }
 }

@@ -11,10 +11,15 @@ import SwiftUI
 struct ContentView: View {
     @State private var userRedText = false
     var body: some View {
-        Button("Hello World") {
-            self.userRedText.toggle()
+        VStack {
+            Text("Anakin")
+                .blur(radius: 0)
+            Text("Ahsoka")
+            Text("ObiWan")
+            Text("Yoda")
         }
-        .foregroundColor(userRedText ? .red : .blue)
+        .blur(radius: 5)
+        
     }
 }
 

@@ -9,19 +9,12 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var userRedText = false
     var body: some View {
-        
-        Text("Hello World")
-            .padding()
-            .background(Color.red)
-            .padding()
-            .background(Color.blue)
-            .padding()
-            .background(Color.green)
-            .padding()
-            .background(Color.yellow)
-            .padding()
-            .background(Color.purple)
+        Button("Hello World") {
+            self.userRedText.toggle()
+        }
+        .foregroundColor(userRedText ? .red : .blue)
     }
 }
 
